@@ -1,0 +1,45 @@
+﻿@model BitTreeMarket.Models.DetailsVm
+
+<section id="portfolio" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">AJ PUT SOME SPECIAL WORDS HERE</h2>
+                <h3 class="section-subheading text-muted">AND HERE PLEASSEE</h3>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <hr />
+        </div>
+        <div class="row">
+            <div class="col-md-3 column">
+            </div>
+            <div class="col-md-6 column">
+                <img src="Images/@Model.Products.ImageLink" class="img-responsive" alt="">
+                <div class="portfolio-caption">
+                    <h4 align="center">@Model.Products.Name</h4>
+                </div>
+                <p>@Model.Products.Details</p>
+                <div align="center">
+                    <form action="~/Products/Products">
+                        <button data-bind="click: $parent.Cart.add" type="submit" class="btn btn-primary">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3 column">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/jquery.signalR-1.0.0.js"></script>
+    <script type="text/javascript" src="~/signalr/hubs"></script>
+    <script type="text/javascript" src="~/Scripts/common.js"></script>
+    <script type="text/javascript" src="~/Scripts/app.js"></script>
+}

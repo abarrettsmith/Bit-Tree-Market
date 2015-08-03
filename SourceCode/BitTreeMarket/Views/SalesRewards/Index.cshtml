@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BitTreeMarket.Model.SalesReward>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Commission.CommissionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reward.RewardId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Commission.CommissionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reward.RewardId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SalesRewardId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SalesRewardId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SalesRewardId })
+        </td>
+    </tr>
+}
+
+</table>

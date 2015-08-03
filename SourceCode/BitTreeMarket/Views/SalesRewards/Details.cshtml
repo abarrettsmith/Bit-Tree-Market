@@ -1,0 +1,34 @@
+﻿@model BitTreeMarket.Model.SalesReward
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SalesReward</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Commission.CommissionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Commission.CommissionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reward.RewardId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reward.RewardId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SalesRewardId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
